@@ -21,6 +21,8 @@
 	<div>	
 			<h1>Test</h1>
 	</div>
+	
+	<p>${movie.name}</p>
 
 	<jsp:include page="footer.jsp" />
 	<jsp:include page="importJs.jsp"/>
