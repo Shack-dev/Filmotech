@@ -2,4 +2,21 @@
 	
 	--color-1 : #000000;
 	--color-2 : #ffffff;
+	
 }
+
+body,
+html,
+nav,
+div,
+p,
+ul {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	
+	}
+
+a{
+	text-decoration: none;
+}	

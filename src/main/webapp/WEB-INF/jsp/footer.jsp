@@ -1,8 +1,11 @@
-	<nav class="navbar navbar-default navbar-fixed-bottom">
-		<div class="container">
-			<ul class="nav navbar-nav  navbar-foot">
-				<li class="pull-left"><a>© 2019 Copyright</a></li>
-				<li class="pull-right"><a >Formation Eni</a></li>		
+	<nav class="footer">
+		<div class="block-footer">
+			<ul>
+				<li><a>Filmotech</a></li>
+				<li><a href="#">Qui sommes nous ?</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Mentions légales</a></li>
+				<li><a href="#">Connexion/Déconnexion</a></li>		
 			</ul>
 		</div>
 	</nav>	

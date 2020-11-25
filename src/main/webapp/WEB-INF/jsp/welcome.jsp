@@ -23,5 +23,6 @@
 	</div>
 
 	<jsp:include page="footer.jsp" />
+	<jsp:include page="importJs.jsp"/>
 </body>
 </html>
