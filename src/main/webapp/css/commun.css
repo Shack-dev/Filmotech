@@ -2,6 +2,8 @@
 	
 	--color-1 : #000000;
 	--color-2 : #ffffff;
+	--color-3 : #E3E3E3;
+	--color-4 : #C4C4C4;
 	
 }
 
@@ -19,4 +21,27 @@ ul {
 
 a{
 	text-decoration: none;
-}	
+}
+
+/*------------------------------------title---------------------------------------------*/
+
+.title-head{
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.title-1{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+/*------------------------------------divers---------------------------------------------*/
+
+.polygon{
+ 	display : inline-block;
+ 	height : 0;
+ 	width : 0;
+ 	border-right : 16px solid transparent;
+ 	border-bottom : 24px solid var(--color-4);
+ 	border-left : 16px solid transparent;
+}

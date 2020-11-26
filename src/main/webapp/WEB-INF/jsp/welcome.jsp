@@ -13,16 +13,26 @@
 
 </head>
 
-<body>
+<body class="welcome">
 
 	<jsp:include page="header.jsp" />
 
 	
 	<div>	
-			<h1>Test</h1>
+			<p class="title-head">Bienvenue sur Filmotech<br>L'encyclopedie de tous vos films.</p>
 	</div>
 	
-	<p>${movie.name}</p>
+	<div>	
+			<p class="title-1">Liste aléatoire</p>
+	</div>
+	
+	<div class="slide">
+		<div class="polygon"></div>
+			<div class="img-home"><p>Photo</p></div>
+		<div class="polygon"></div>
+	</div>
+	
+	<div><p>${movie.name}</p></div>
 
 	<jsp:include page="footer.jsp" />
 	<jsp:include page="importJs.jsp"/>

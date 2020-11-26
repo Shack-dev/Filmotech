@@ -1,21 +1,42 @@
 @media screen and (max-width: 480px) {
 	
 
+.welcome > div:nth-child(2) > p {
+	text-align: center;
+	padding: 1rem 0;
+}
 
+.welcome > div:nth-child(3) > p {
+	text-align: center;
+	padding: 1rem 0;
+	color: var(--color-3);
+}
 
+.welcome > div:nth-child(5) > p {
+	padding: 1.5rem 0;
+	font-weight: bold;
+	text-align: center;
+}
 
+	.img-home {
+		border: 1px solid var(--color-1);
+		width: 239px;
+		height: 369px;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
+		.slide {
+			display: flex;
+			justify-content: space-around;
+		}
+		
+			.slide > div:nth-child(1){
+				margin: auto 0;
+				transform: rotate(-90deg);
+			}
+			
+			.slide > div:nth-child(3){
+				margin: auto 0;
+				transform: rotate(90deg);
+			}
 
 }
