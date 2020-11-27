@@ -3,10 +3,16 @@
  */
 package fr.eni.filmotech.bo;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 /**
  * Objet permettant la gestion des films.
@@ -28,7 +34,13 @@ public class Movie {
 	
 	private String pictureLink;
 	
-	private int categoryId;
+	
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "")
+	@JoinTable(
+			name="movie_category",
+			joinColumns=@JoinColumn(name="movie_id", referencedColumnName="id"),
+			inverseJoinColumns=@JoinColumn(name="category_id", referencedColumnName="id"))
+	private List<Category> category;
 	
 	private int creatorId;
 	
@@ -37,17 +49,19 @@ public class Movie {
 	public Movie() {
 		super();
 	}
-
-	public Movie(int id, String name, String issueDate, String pictureLink, int categoryId, int creatorId) {
+	
+	public Movie(int id, String name, String issueDate, String pictureLink, List<Category> category, int creatorId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.issueDate = issueDate;
 		this.pictureLink = pictureLink;
-		this.categoryId = categoryId;
+		this.category = category;
 		this.creatorId = creatorId;
 	}
-	
+
+
+
 	//setters getters
 	
 	/**
@@ -114,20 +128,21 @@ public class Movie {
 		this.pictureLink = pictureLink;
 	}
 
+	
 	/**
-	 * retourne l'id de la catégorie du film.
-	 * @return categoryId
+	 * Retourne une liste de catégories
+	 * @return category
 	 */
-	public int getCategoryId() {
-		return categoryId;
+	public List<Category> getCategory() {
+		return category;
 	}
 
 	/**
-	 * Ajoute l'id d'une catégorie associée.
-	 * @param categoryId
+	 * Ajoute une catégorie dans une liste.
+	 * @param category
 	 */
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory(List<Category> category) {
+		this.category = category;
 	}
 
 	/**
@@ -151,7 +166,7 @@ public class Movie {
 	@Override
 	public String toString() {
 		return "Movie [id=" + id + ", name=" + name + ", issueDate=" + issueDate + ", pictureLink=" + pictureLink
-				+ ", categoryId=" + categoryId + ", creatorId=" + creatorId + "]";
+				+ ", category=" + category + ", creatorId=" + creatorId + "]";
 	}
 
 }
