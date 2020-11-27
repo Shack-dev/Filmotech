@@ -23,15 +23,18 @@
 	</div>
 	
 	<div>
-	<form:form method="POST" action="/recherche/resultat"
+	<form:form method="POST" action="/rechercher/resultat"
 			modelAttribute="movie">
 			<div>
 				<form:label path="name">Par nom :</form:label>
 				<form:input path="name" />				
 			</div>
 			<div>
-		<!--	<form:label path="">Par catégorie :</form:label>
-				<form:input path="categoryId" /> 	-->	
+				<form:label path="category">Par catégorie :</form:label>
+				<form:select path="category" multiple="false">
+					<form:option value="-" label="Selectionnez une catégorie"/>
+					<form:options items="${category}" />
+				</form:select>
 			</div>
 			<div>
 				<input type="submit" value="Submit" />

@@ -3,10 +3,13 @@
  */
 package fr.eni.filmotech.bo;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  * @author gaeta
@@ -22,19 +25,25 @@ public class Category {
 	private int id;
 	
 	private String name;
+	
+	@ManyToMany(mappedBy = "category" )
+	private List<Movie> movieId;
 
 	//Constructor
 	
 	public Category() {
 		super();
 	}
-
-	public Category(int id, String name) {
+	
+	public Category(int id, String name, List<Movie> movieId) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.movieId = movieId;
 	}
-	
+
+
+
 	//Getters and setters
 
 	/**
@@ -59,6 +68,22 @@ public class Category {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public List<Movie> getMovieId() {
+		return movieId;
+	}
+
+	/**
+	 * 
+	 * @param movieId
+	 */
+	public void setUserId(List<Movie> movieId) {
+		this.movieId = movieId;
 	}
 	
 	
