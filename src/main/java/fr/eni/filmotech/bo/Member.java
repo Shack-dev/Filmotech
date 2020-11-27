@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
@@ -16,6 +18,11 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="members")
+
+@NamedQueries({
+	@NamedQuery (name = "userLogin",
+				query = "SELECT m FROM Member m WHERE m.username LIKE :username AND m.password LIKE :password")
+	})
 public class Member  {
 	
 	@Id
