@@ -12,7 +12,7 @@
 	        <ul class="nav nav-justified">
 	            <nav>
 	                <ul class="nav">
-	                    <li><a href="#">Connexion</a></li>
+	                    <li><a href="/login">Connexion</a></li>
 	                    <li><a href="#">Deconnexion</a></li>
 	                    <li><a href="#">Rechercher</a></li>
 	                    <li><a href="#">Ajouter un film</a></li>
