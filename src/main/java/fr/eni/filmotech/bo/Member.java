@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 
 /**
@@ -28,11 +31,12 @@ public class Member  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long 	member_id;
-	
+	@NotNull
 	public String 	username;
 	public String 	firstname;
 	public String 	lastname;
 	public Date 	creationDate;
+	@NotNull
 	public String 	password;
 	public Boolean 	isAdmin;
 	

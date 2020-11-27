@@ -14,10 +14,14 @@
 		<div>
 				<form:label path="username" >Nom d'utilisateur </form:label>
 				<form:input path="username" />
+				<form:errors path="username"/>
+				
 			</div>
 			<div>
 				<form:label path="password" >Mot de passe </form:label>
 				<form:input type="password" path="password" />
+				<form:errors path="password"/>
+				
 			</div>
 			<input type="submit" value="Submit" />
 		</form:form>
