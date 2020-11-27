@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.eni.filmotech.service;
+package fr.eni.filmotech.services;
 
 import java.util.Optional;
 

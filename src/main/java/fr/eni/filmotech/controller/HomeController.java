@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import fr.eni.filmotech.bo.Movie;
-import fr.eni.filmotech.service.MovieService;
+import fr.eni.filmotech.services.MovieService;
 
 @Controller
 public class HomeController {
