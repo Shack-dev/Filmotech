@@ -17,7 +17,7 @@
 			</div>
 			<div>
 				<form:label path="password" >Mot de passe </form:label>
-				<form:input path="password" />
+				<form:input type="password" path="password" />
 			</div>
 			<input type="submit" value="Submit" />
 		</form:form>
