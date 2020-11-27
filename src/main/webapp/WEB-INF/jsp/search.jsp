@@ -30,8 +30,8 @@
 				<form:input path="name" />				
 			</div>
 			<div>
-				<form:label path="">Par catégorie :</form:label>
-				<form:input path="categoryId" />
+		<!--	<form:label path="">Par catégorie :</form:label>
+				<form:input path="categoryId" /> 	-->	
 			</div>
 			<div>
 				<input type="submit" value="Submit" />

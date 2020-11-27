@@ -14,7 +14,7 @@
 	                <ul class="nav">
 	                    <li><a href="/login">Connexion</a></li>
 	                    <li><a href="#">Deconnexion</a></li>
-	                    <li><a href="#">Rechercher</a></li>
+	                    <li><a href="/rechercher">Rechercher</a></li>
 	                    <li><a href="#">Ajouter un film</a></li>
 	                    <li><a href="#">Ajouter un <br>Acteur/Réalisateur</a></li>
 	                </ul>
